@@ -1,0 +1,54 @@
+.nav-bar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 60px;
+    padding-left: 16px;
+    border: 1px solid black;
+}
+
+.nav-bar a {
+    padding: 6px 8px 6px 0px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+@media screen and (max-height: 450px) {
+    .nav-bar {
+        padding-top: 15px;
+    }
+
+    .nav-bar a {
+        font-size: 18px;
+    }
+}
+
+#main-doc {
+    position: absolute;
+    margin-left: 250px;
+    padding: 25px;
+}
+
+code{
+    display: block;
+    background-color: #eeeeee;
+    color: black;
+    text-align: left;
+    white-space: pre-wrap;
+    position: relative;
+    word-break: normal;
+    width: 79%;
+    max-width: 100%;
+    line-height: 2;
+    padding: 13px;
+    margin: 11px;
+    margin-left: 23px;
+    border-radius: 7px; 
+  }
