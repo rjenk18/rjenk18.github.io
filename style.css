@@ -51,11 +51,13 @@ body {
 .project-container {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 4rem;
     margin: 0 auto;
-    margin-bottom: 6rem;
+}
+
+#project-tile {
+    background-color: white;
 }
 
 .project-container.new {
