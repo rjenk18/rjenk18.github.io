@@ -9,7 +9,7 @@ function telephoneCheck(str) {
     newStr = newStr.split("");
     for (let i = 0; i < newStr.length; i++) {
       if (newStr[i].search(/[()]/) != -1) countParen++;
-      if ()
+    
   
   
   
@@ -22,3 +22,7 @@ function telephoneCheck(str) {
   }
   
   telephoneCheck("555-555-5555");
+
+
+
+  let numCheck = /^(1\s?)?[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
