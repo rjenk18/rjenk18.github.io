@@ -1,27 +1,48 @@
 function telephoneCheck(str) {
-    let newStr = str.replace(/\s*/g, "");
-    const numbers = /^[0-9]+$/;
-    let countHyphen = 0;
-    let countParen = 0;
-    let numDigits = 0;
-    let countryCode = 1;
-  
-    newStr = newStr.split("");
-    for (let i = 0; i < newStr.length; i++) {
-      if (newStr[i].search(/[()]/) != -1) countParen++;
-    
-  
-  
-  
-      if (newStr.length < 10 || newStr.length > 11) {
-        return false
-      }
-      return true;
+
+  str = str.replace(/\s*[\-]/g, "");
+  let hasTenDigits = false;
+  let hasElevenDigits = false;
+  let startsWithOne = false;
+  let hasPermittedCharsOnly = false;
+  let hasCorrectParentheses = false;
+
+  if (str.length === 10) {
+    hasTenDigits = true;
+  };
+
+  if (str.length === 11) {
+    hasElevenDigits
+  }
+
+  for (let i = 0; i < str.length; i++) {
+    if (str.search[i](/[0-9]+/g)) {
+      hasPermittedCharsOnly = true;
     }
-    console.log = newStr;
   }
   
-  telephoneCheck("555-555-5555");
+  if (!hasTenDigits && !hasElevenDigits) {
+    console.log(false);
+    return false;
+  } else if (!hasPermittedCharsOnly || !hasCorrectParentheses) {
+    console.log(false);
+    return false;
+  } else if (hasElevenDigits && !startsWithOne) {
+    console.log(false);
+    return false;
+  } 
+  console.log(true);
+  return true;
+  
+  
+  
+  
+  
+}
+
+telephoneCheck("1 555-555-5555");
+telephoneCheck("5555555555");
+telephoneCheck("555-555-5555");
 
 
 
