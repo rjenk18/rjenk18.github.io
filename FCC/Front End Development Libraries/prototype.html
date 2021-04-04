@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <p>JavaScript Prototypes</p>
+        <script>
+            function Person (name, age) {
+                this.name = name;
+                this.age = age;
+                this.greeting = function () {
+                    return 'Hello! My name is ' + this.name;
+                }
+            }
+
+            var johnDoe = new Person('John Doe', 32);
+            console.log(johnDoe.greeting());
+
+            var janeDoe = new Person('Jane Doe', 28);
+            console.log(janeDoe.greeting());
+
+            function Student (name, age, school) {
+                this.__proto__ = new Person(name, age);
+                this.school - school;
+            }
+
+            var sarahBrown = new Student('Sarah Brown', 17, 'PennX');
+
+            console.log(sarahBrown.greeting());
+        </script>
+
+    </body>
+</html>
