@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <div>
+            You have visited this page <span id="report"> </span> times.
+        </div>
+
+        <script>
+            var timesVisited = 0;
+            if (localStorage.timesVisited) {
+                timesVisited = parseInt(localStorage.timesVisited);
+            }
+            timesVisited += 1;
+            localStorage.setItem('timesVisited', timesVisited);
+
+            var report = docuemnt.getElementById('report');
+            report.innerHTML = timesVisited;
+
+            if (timesVisited > 10) {
+                report.style.backgroundColor = 'red';
+            }
+
+            var report = document.getElement
+        </script>
+    </body>
+</html>
